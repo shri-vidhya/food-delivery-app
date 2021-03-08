@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding"
+    android:minHeight="74dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/restaurant_cover_image"
+        android:layout_width="@dimen/list_item_image_width"
+        android:layout_height="@dimen/list_item_image_height"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/abc_vector_test"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        style="@style/TextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintStart_toEndOf="@+id/restaurant_cover_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Thai Restaurant" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/TextLabel.Gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintEnd_toStartOf="@+id/delivery_time"
+        app:layout_constraintStart_toEndOf="@+id/restaurant_cover_image"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_name"
+        tools:text="Description" />
+
+    <TextView
+        android:id="@+id/delivery_time"
+        style="@style/TextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="22 mins" />
+
+    <include
+        android:id="@+id/device_divider_view"
+        layout="@layout/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/padding_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_cover_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>
