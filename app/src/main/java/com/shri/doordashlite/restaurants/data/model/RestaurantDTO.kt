@@ -1,4 +1,4 @@
-package com.shri.doordashlite.restaurants.model
+package com.shri.doordashlite.restaurants.data.model
 
 data class RestaurantDTO(
     val is_first_time_user: Boolean,

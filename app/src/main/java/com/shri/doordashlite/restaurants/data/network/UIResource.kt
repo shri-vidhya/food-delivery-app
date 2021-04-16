@@ -1,4 +1,4 @@
-package com.shri.doordashlite.restaurants.network
+package com.shri.doordashlite.restaurants.data.network
 
 import java.lang.Exception
 

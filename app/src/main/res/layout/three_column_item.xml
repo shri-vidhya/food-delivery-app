@@ -44,6 +44,18 @@
         app:layout_constraintTop_toBottomOf="@+id/restaurant_name"
         tools:text="Description" />
 
+    <ImageView
+        android:id="@+id/favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/padding_large"
+        app:layout_constraintStart_toEndOf="@+id/restaurant_cover_image"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        />
+
     <TextView
         android:id="@+id/delivery_time"
         style="@style/TextLabel"

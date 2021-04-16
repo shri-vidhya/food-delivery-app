@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.shri.doordashlite.R
-import com.shri.doordashlite.restaurants.network.Status
+import com.shri.doordashlite.restaurants.data.UserPreferences
+import com.shri.doordashlite.restaurants.data.network.Status
 import com.shri.doordashlite.restaurants.ui.RestaurantsViewModel
 
 class RestaurantFinderFragment : Fragment() {
@@ -24,12 +25,14 @@ class RestaurantFinderFragment : Fragment() {
     private lateinit var errorTextView: TextView
     private var recyclerViewAdapter: RestaurantListAdapter? = null
     private val viewModel: RestaurantsViewModel by activityViewModels()
+    private lateinit var sharedPref : UserPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        sharedPref = UserPreferences(requireContext())
         return inflater.inflate(R.layout.restaurant_finder, container, false)
     }
 
@@ -59,7 +62,8 @@ class RestaurantFinderFragment : Fragment() {
     }
 
     private fun loadData() {
-        recyclerViewAdapter = RestaurantListAdapter()
+        val favourites = sharedPref.getFromFavourites()
+        recyclerViewAdapter = RestaurantListAdapter(sharedPref, favourites)
         restaurantList.adapter = recyclerViewAdapter
         val limit = 50
         val offset = 0

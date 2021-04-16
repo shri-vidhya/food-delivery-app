@@ -4,11 +4,11 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.nhaarman.mockitokotlin2.timeout
 import com.nhaarman.mockitokotlin2.verify
-import com.shri.doordashlite.restaurants.model.RestaurantDTO
-import com.shri.doordashlite.restaurants.model.Store
-import com.shri.doordashlite.restaurants.network.RestaurantsAPI
-import com.shri.doordashlite.restaurants.network.Status
-import com.shri.doordashlite.restaurants.network.UIResource
+import com.shri.doordashlite.restaurants.data.model.RestaurantDTO
+import com.shri.doordashlite.restaurants.data.model.Store
+import com.shri.doordashlite.restaurants.data.network.RestaurantsAPI
+import com.shri.doordashlite.restaurants.data.network.Status
+import com.shri.doordashlite.restaurants.data.network.UIResource
 import kotlinx.coroutines.runBlocking
 import okhttp3.MediaType
 import okhttp3.ResponseBody

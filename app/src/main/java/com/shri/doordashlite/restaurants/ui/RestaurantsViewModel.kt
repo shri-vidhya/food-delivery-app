@@ -5,9 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.shri.doordashlite.restaurants.model.Store
-import com.shri.doordashlite.restaurants.network.RestaurantsAPI
-import com.shri.doordashlite.restaurants.network.UIResource
+import com.shri.doordashlite.restaurants.data.model.Store
+import com.shri.doordashlite.restaurants.data.network.RestaurantsAPI
+import com.shri.doordashlite.restaurants.data.network.UIResource
 import java.io.IOException
 import java.lang.Exception
 import kotlinx.coroutines.launch

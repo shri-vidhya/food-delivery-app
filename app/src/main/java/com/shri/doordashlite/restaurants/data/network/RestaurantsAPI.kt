@@ -1,12 +1,14 @@
-package com.shri.doordashlite.restaurants.network
+package com.shri.doordashlite.restaurants.data.network
 
 import com.google.gson.GsonBuilder
-import com.shri.doordashlite.restaurants.model.RestaurantDTO
+import com.shri.doordashlite.restaurants.data.model.RestaurantDTO
+import okhttp3.OkHttpClient
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+
 
 open class RestaurantsAPI {
     interface Api {
