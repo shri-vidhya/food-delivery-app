@@ -6,6 +6,7 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
+import com.shri.doordashlite.restaurants.LoginFragment
 import com.shri.doordashlite.restaurants.RestaurantFinderFragment
 import com.shri.doordashlite.restaurants.ui.RestaurantsViewModel
 import com.shri.doordashlite.restaurants.ui.RestaurantsViewModelFactory
@@ -21,8 +22,10 @@ class DoorDashLiteActivity : AppCompatActivity() {
         progressOverlay = findViewById(R.id.progress_bar)
         val toolbar: Toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
+        // check shared pref for auth token
+        // Show login screen if no auth token
         supportFragmentManager.beginTransaction()
-            .replace(R.id.content_frame, RestaurantFinderFragment.newInstance())
+            .replace(R.id.content_frame, LoginFragment.newInstance())
             .commit()
     }
 }
